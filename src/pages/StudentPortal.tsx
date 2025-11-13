@@ -12,8 +12,12 @@ import {
   TrendingUp,
   Download,
   Bell,
+  Mail,
+  Phone,
+  MapPin,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const StudentPortal = () => {
   const courses = [
@@ -64,6 +68,73 @@ const StudentPortal = () => {
           <div className="grid lg:grid-cols-3 gap-6">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
+              {/* Student Profile */}
+              <Card className="p-6">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <User className="h-6 w-6 text-primary" />
+                  Student Profile
+                </h2>
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="flex flex-col items-center gap-4">
+                    <Avatar className="h-32 w-32">
+                      <AvatarImage src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop" alt="Student" />
+                      <AvatarFallback className="text-2xl">JD</AvatarFallback>
+                    </Avatar>
+                    <Button variant="outline" size="sm">
+                      Update Photo
+                    </Button>
+                  </div>
+                  <div className="flex-1 space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Full Name</div>
+                        <div className="font-semibold text-foreground">John Doe</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Student ID</div>
+                        <div className="font-semibold text-foreground">2024CS001</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Program</div>
+                        <div className="font-semibold text-foreground">Computer Science</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Academic Year</div>
+                        <div className="font-semibold text-foreground">Year 3</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Admission Date</div>
+                        <div className="font-semibold text-foreground">September 1, 2022</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Expected Graduation</div>
+                        <div className="font-semibold text-foreground">June 2026</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1 flex items-center gap-1">
+                          <Mail className="h-4 w-4" />
+                          Email
+                        </div>
+                        <div className="font-semibold text-foreground">john.doe@university.edu</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1 flex items-center gap-1">
+                          <Phone className="h-4 w-4" />
+                          Phone
+                        </div>
+                        <div className="font-semibold text-foreground">+1 (555) 123-4567</div>
+                      </div>
+                      <div className="md:col-span-2">
+                        <div className="text-sm text-muted-foreground mb-1 flex items-center gap-1">
+                          <MapPin className="h-4 w-4" />
+                          Address
+                        </div>
+                        <div className="font-semibold text-foreground">123 Campus Drive, University City, ST 12345</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
               {/* Quick Stats */}
               <div className="grid sm:grid-cols-3 gap-4">
                 <Card className="p-6">
